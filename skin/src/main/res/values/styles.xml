@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dayMode">
+
+        <color name="color_background">@color/blue03</color>
+        <color name="color_title">@color/black35</color>
+        <color name="color_info">@color/black80</color>
+    </style>
+</resources>

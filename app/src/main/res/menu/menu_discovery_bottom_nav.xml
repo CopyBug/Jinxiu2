@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/selector_discovery_rank"
+        android:title="@string/discovery_data_menu_rank"/>
+
+    <item
+        android:id="@+id/home_found"
+        android:icon="@drawable/selector_discovery_message"
+        
+        android:title="@string/discovery_data_menu_messageBoard"/>
+
+</menu>

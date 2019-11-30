@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout
+        android:padding="2dp"
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/black"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:elevation="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.hjq.bar.TitleBar
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/video_data_title"
+                app:leftIcon="@drawable/icon_back"
+                app:titleColor="@color/white"
+                app:rightIcon="@drawable/icon_video_search"
+                android:background="@android:color/transparent"
+                />
+
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <com.hjq.widget.layout.NoScrollViewPager
+                android:isScrollContainer="true"
+                android:layout_above="@id/video_tablayout"
+                android:id="@+id/video_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/video_tablayout"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/whitenight"
+                android:layout_height="50dp"/>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

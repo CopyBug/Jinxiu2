@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:drawable="@drawable/icon_culation_a_blue" android:duration="300"></item>
+    <item  android:drawable="@drawable/icon_culation_b_blue" android:duration="300"></item>
+    <item android:drawable="@drawable/icon_culation_c_blue" android:duration="300"></item>
+    <item android:drawable="@drawable/icon_culation_a_blue" android:duration="300"></item>
+</animation-list>

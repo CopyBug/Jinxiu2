@@ -1,0 +1,369 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:circleimageview="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="Home"
+            type="com.lhw.sion.bean.HomeBean" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background_blue_black"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl_test_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0px">
+
+            <com.lhw.sion.widget.XCollapsingToolbarLayout
+                android:id="@+id/ctl_test_bar"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:scrimVisibleHeightTrigger="100dp">
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:elevation="300dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView
+
+                            style="@style/ImportantStyle"
+                            android:paddingTop="100dp"
+                            android:elevation="200dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Done is better than perfect."
+                            android:textColor="@color/white"/>
+                        <TextView
+
+                            android:elevation="200dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="完成比完美更重要。"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_home_toolbar"
+                        app:layout_collapseMode="parallax" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/t_test_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_marginRight="20dp"
+                    app:layout_collapseMode="pin" />
+
+                <com.hjq.bar.TitleBar
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:backButton="false"
+                    app:barStyle="transparent"
+                    app:layout_collapseMode="pin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:circleimageview="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:glide_url_circle="@{Home.home_imageUrl}"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            circleimageview:civ_border_overlay="false"
+                            circleimageview:civ_border_width="2dp"
+                            />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_test_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="50dp"
+                            android:background="@drawable/bg_home_search_bar_transparent"
+                            android:gravity="center"
+                            android:text="请输入搜索关键字"
+                            android:textColor="#a4a4a4"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </com.hjq.bar.TitleBar>
+
+            </com.lhw.sion.widget.XCollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:padding="15dp"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_home_compant"
+                    >
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+
+                            android:paddingTop="5dp"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <TextView
+
+                                style="@style/NormalStyle"
+                                android:textColor="@color/color_text1_black_grace"
+                                android:gravity="center"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fragment_home_target"
+
+                                />
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    style="@style/ImportantStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_text2_black_grace"
+                                    android:text="@{String.valueOf(Home.home_planCount)}"
+                                    />
+                                <TextView
+                                    style="@style/NormalStyle"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_text2_black_grace"
+                                    android:text="@string/fragment_home_module1"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+                            android:gravity="center"
+
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <TextView
+                                style="@style/NormalStyle"
+                                android:layout_width="80dp"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fragment_home_remainder"
+                                />
+                            <TextView
+                                style="@style/ImportantStyle"
+                                android:textColor="@color/color_text2_black_grace"
+                                android:layout_marginTop="5dp"
+                                android:text="@{String.valueOf(Home.home_lastDay)}"
+                                android:layout_width="80dp"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:paddingBottom="10dp"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/NormalStyle"
+                                android:layout_width="80dp"
+
+                                android:layout_height="wrap_content"
+                                android:text="@string/fragment_home_needToLearn" />
+
+                            <TextView
+                                style="@style/ImportantStyle"
+                                android:textColor="@color/color_text2_black_grace"
+                                android:gravity="center"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@{String.valueOf(Home.home_needLearnCount)}" />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/NormalStyle"
+                                android:layout_width="80dp"
+
+                                android:layout_height="wrap_content"
+                                android:text="@string/fragment_home_needReview" />
+
+                            <TextView
+                                style="@style/ImportantStyle"
+                                android:textColor="@color/color_text2_black_grace"
+                                android:gravity="center"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@{String.valueOf(Home.home_needReviewCount)}" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+
+                            android:paddingTop="5dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="2">
+
+
+                            <LinearLayout
+                                android:layout_marginLeft="55dp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+
+                                    style="@style/NormalStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fragment_home_wordPackageProgress"/>
+                                <ProgressBar
+                                    android:layout_marginTop="5dp"
+                                    android:progress="50"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_height="15dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/ImportantStyle"
+                                android:text="@{Home.home_learnedCount+@string/fragment_home_slash+Home.home_dictionaryCount}"
+                                android:textColor="@color/color_text2_black_grace"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/selector_home_backword"
+                    android:id="@+id/btn_recite_commit"
+                    style="@style/ButtonStyle2"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/fragment_home_backWord" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_recite_pk"
+                    android:textColor="@color/blue05"
+                    android:background="@drawable/selector_home_rbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/fragment_home_review" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:textColor="@color/blue05"
+                    android:background="@drawable/selector_home_rbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/fragment_home_read" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

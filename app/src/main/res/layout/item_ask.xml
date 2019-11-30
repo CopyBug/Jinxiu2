@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:orientation="vertical">
+       <Button
+           android:paddingTop="10dp"
+           android:paddingBottom="10dp"
+           android:paddingRight="5dp"
+
+           android:paddingLeft="5dp"
+           android:id="@+id/ask1"
+           android:background="@drawable/bg_ask_button"
+           android:textSize="@dimen/NumberOne"
+           android:maxLength="20"
+           android:textColor="@color/white"
+           android:singleLine="true"
+           android:text="n.丝绒；天鹅绒；立绒；"
+           android:layout_marginTop="50dp"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"></Button>
+
+       <Button
+           android:paddingTop="10dp"
+           android:paddingBottom="10dp"
+           android:paddingRight="5dp"
+           android:paddingLeft="5dp"
+           android:id="@+id/ask2"
+           android:background="@drawable/bg_ask_button"
+           android:textSize="@dimen/NumberOne"
+           android:textColor="@color/white"
+           android:singleLine="true"
+           android:text="n.丝绒；天鹅绒；立绒；"
+           android:layout_marginTop="50dp"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"></Button>
+       <Button
+           android:paddingTop="10dp"
+           android:paddingBottom="10dp"
+           android:paddingRight="5dp"
+           android:paddingLeft="5dp"
+           android:id="@+id/ask3"
+           android:background="@drawable/bg_ask_button"
+           android:textSize="@dimen/NumberOne"
+           android:textColor="@color/white"
+           android:singleLine="true"
+           android:text="n.丝绒；天鹅绒；立绒；"
+           android:layout_marginTop="50dp"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"></Button>
+       <Button
+           android:paddingTop="10dp"
+           android:paddingBottom="10dp"
+           android:paddingRight="5dp"
+           android:paddingLeft="5dp"
+           android:id="@+id/ask4"
+           android:background="@drawable/bg_ask_button"
+           android:textSize="@dimen/NumberOne"
+           android:textColor="@color/white"
+           android:singleLine="true"
+           android:text="n.丝绒；天鹅绒；立绒；"
+           android:layout_marginTop="50dp"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"></Button>
+   </LinearLayout>
+</LinearLayout>

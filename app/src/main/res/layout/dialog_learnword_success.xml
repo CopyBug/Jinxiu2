@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:paddingTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_dialog_botton" />
+<RatingBar
+    android:id="@+id/top_dialog_stars"
+    android:numStars="3"
+    android:rating="2"
+    android:progressTint="@color/orange"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    ></RatingBar>
+    <ImageView
+
+        android:id="@+id/other_dialog_enjoy"
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_enjoy"></ImageView>
+<TextView
+    android:id="@+id/center_dialog_textvview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textSize="@dimen/NumberTwo"
+    android:text="恭喜你成功收获2颗小星星"></TextView>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_dialog_custom_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_custom_dialog" />
+</FrameLayout>

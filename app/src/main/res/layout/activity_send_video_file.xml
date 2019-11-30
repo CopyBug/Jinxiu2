@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="SendVideo"
+        type="com.lhw.sion.bean.DataBingSendVideo" />
+
+</data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#16131F"
+        tools:context=".ui.activity.SendVideoFileActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+<com.hjq.bar.TitleBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:title="发布"
+    app:leftIcon="@drawable/icon_back"
+    app:titleColor="@color/white"
+    android:background="#16131F"></com.hjq.bar.TitleBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="2.2"
+               android:orientation="vertical">
+               <EditText
+                   android:textColorHint="@color/pink"
+                   android:textColor="@color/white"
+                   android:textSize="18dp"
+                   android:gravity="start"
+                   android:maxLength="50"
+                   android:hint="写你想分享给别人的单词."
+                   android:text="@={SendVideo.comment}"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"/>
+
+               <Button
+                   android:id="@+id/set_word"
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_gravity="right"
+                   android:background="@color/transparent"
+                   android:hint="#单词"
+                   android:text="@={SendVideo.title}"
+                   android:textColor="@color/blue06"
+                   android:textColorHint="@color/blue06"
+                   android:textSize="15dp" />
+
+           </LinearLayout>
+            <ImageView
+                android:id="@+id/send_img"
+                android:src="@drawable/default_image"
+                android:layout_width="130dp"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+
+            <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#707070"></View>
+
+        <com.hjq.widget.layout.SettingBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:bar_leftText="设置权限"
+            app:bar_rightIcon="@drawable/ico_go_black"
+            app:bar_leftColor="@color/white"/>
+            <com.hjq.widget.layout.SettingBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:bar_leftText="设置其他信息"
+                app:bar_rightIcon="@drawable/ico_go_black"
+                app:bar_leftColor="@color/white"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:layout_gravity="bottom"
+            android:id="@+id/btn_send_commit"
+            style="@style/ButonSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发布" />
+
+    </FrameLayout>
+
+</layout>

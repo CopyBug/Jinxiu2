@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.activity.VideoadmissionActivity">
+<com.lhw.sion.ui.view.TextureCameraPreview
+        android:id="@+id/texture_camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+<androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+<android.opengl.GLSurfaceView
+        android:visibility="gone"
+        android:id="@+id/video_glSurface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <com.lhw.sion.ui.view.RecordButton
+                android:id="@+id/video_recording"
+               android:layout_gravity="bottom|center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+       <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="20dp"
+               android:layout_gravity="bottom"
+               android:gravity="center"
+               android:layout_marginBottom="20dp"
+               android:orientation="vertical">
+           <com.hjq.widget.view.ScaleImageView
+                   android:id="@+id/iv_video_image"
+                   android:layout_width="60dp"
+                   android:layout_height="60dp"
+                   android:background="@color/white"
+                   android:scaleType="centerCrop"
+                   app:scaleRatio="0.95"
+                   tools:src="@drawable/icon_null" />
+           <TextView
+                   android:text="视频"
+                   android:textSize="15dp"
+                   android:textColor="@color/white"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+       </LinearLayout>
+    <com.lhw.sion.ui.view.YNlayout
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_gravity="bottom|right"
+            android:id="@+id/video_Send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </FrameLayout>
+</layout>

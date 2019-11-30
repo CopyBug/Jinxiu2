@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="recommendVideo"
+        type="sion.my.jinxiu.bean.SelectVideo.BeanBean" />
+<variable
+    name="presenter"
+    type="com.lhw.sion.mvp.presenter.PresenterRecommentFragment" />
+
+
+</data>
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <FrameLayout
+           android:id="@+id/recomment_fragment"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1">
+    <com.dueeeke.videoplayer.player.VideoView
+        android:elevation="100dp"
+        android:layout_width="match_parent"
+        android:id="@+id/player"
+        android:layout_height="match_parent"/>
+
+           <LinearLayout
+               android:elevation="300dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginTop="100dp"
+               android:background="@android:color/transparent"
+               android:gravity="center_horizontal"
+               android:layout_gravity="center_vertical|right">
+               <de.hdodenhof.circleimageview.CircleImageView
+                   glide_url="@{recommendVideo.wordWritings.jxUser.imghead}"
+                      android:id="@+id/recomment_img"
+                   xmlns:circleimageview="http://schemas.android.com/apk/res-auto"
+                   android:layout_width="50dp"
+                   android:layout_marginBottom="20dp"
+                   android:layout_height="50dp"
+                   circleimageview:civ_border_overlay="false"
+                   circleimageview:civ_border_width="1dp"
+
+                   />
+
+
+               <com.sackcentury.shinebuttonlib.ShineButton
+                   android:ShineButtonCheck="@{recommendVideo.wordWritings.wordStars}"
+                   android:onClick="@{(view) -> presenter.AddStar(view,recommendVideo.wordWritings.title_id)}"
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_centerInParent="true"
+                   android:id="@+id/item_love"
+                   app:btn_color="@android:color/white"
+                   app:btn_fill_color="#F8041B"
+                   app:allow_random_color="false"
+                   app:siShape="@drawable/icon_video_love"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:layout_marginBottom="20dp"
+                   android:text="@{recommendVideo.wordWritings.star}"/>
+
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:onClick="@{(view) ->presenter.ShowCommentMsg(view,recommendVideo)}"
+                   android:id="@+id/item_comment"
+                    android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:src="@drawable/icon_video_comment"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:layout_marginBottom="20dp"
+                   android:text="@{recommendVideo.wordComments!=null?String.valueOf(recommendVideo.wordComments.size()):String.valueOf(0)}"/>
+
+               <androidx.appcompat.widget.AppCompatImageView
+                       android:onClick="@{(view) ->presenter.showEnjoy(view,recommendVideo)}"
+                   android:id="@+id/item_share"
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:src="@drawable/icon_video_enjoy"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:layout_marginBottom="20dp"
+                   android:text="0"/>
+           </LinearLayout>
+           <LinearLayout
+
+               android:layout_marginBottom="15dp"
+               android:elevation="300dp"
+               android:paddingLeft="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_gravity="bottom">
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/themmargin"
+                   android:text="@{recommendVideo.wordWritings.title}"></TextView>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/themmargin"
+                   android:text="@{recommendVideo.wordWritings.context}"></TextView>
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:onClick="@{(view) -> presenter.SearchWord(view,recommendVideo.wordWritings.title)}"
+                    android:id="@+id/searchWord"
+                   android:layout_marginBottom="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:autoLink="all"
+                   android:gravity="center_horizontal"
+                   android:lineSpacingExtra="20dp"
+                   android:text="查看更多"
+                   android:textColor="@color/blue06"
+                   android:textSize="15dp" />
+
+           </LinearLayout>
+
+       </FrameLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/recomment_load"-->
+<!--    android:visibility="gone"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <include-->
+<!--                layout="@layout/loadmove"></include>-->
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+</layout>

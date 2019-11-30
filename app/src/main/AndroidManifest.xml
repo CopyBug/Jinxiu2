@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hjq.demo">
+    <!-- 录音功能 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name="com.lhw.sion.common.MyApplication"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n">
+        <activity android:name="com.lhw.sion.ui.activity.video.LearnVideonewActivity"></activity>
+        <activity android:name="com.lhw.sion.ui.activity.PkActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.VideoadmissionActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.SendVideoFileActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.ThumbVideoActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.EnglishPostBarActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.LearnVideoPersonActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.PlaneActivity" />
+        <activity
+            android:name="com.lhw.sion.ui.activity.LearnVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- 视频学习 -->
+        <activity android:name="com.lhw.sion.ui.activity.EnSearchActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.CnSearchActivity" /> <!-- 录音服务 -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.SearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.lhw.sion.ui.activity.LearnWordInfoActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.LearnStartActivity" /> <!-- 手机号校验 -->
+        <activity android:name="com.lhw.sion.ui.activity.LearnActivity" />
+        <activity
+            android:name="com.lhw.sion.ui.activity.SplashActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/SplashTheme">
+
+            <!-- 程序入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lhw.sion.ui.activity.HomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- &lt;!&ndash; 适配Android 7.0文件意图 &ndash;&gt; -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.LoginActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- 启动页面（因为使用了LauncherTheme，所以不要给这个Activity设置screenOrientation属性，会导致崩溃） -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.RegisterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- App 首页 -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.PasswordForgetActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/password_forget_title"
+            android:screenOrientation="portrait" /> <!-- 登录界面 -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.PasswordResetActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/password_reset_title"
+            android:screenOrientation="portrait" /> <!-- 注册界面 -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.PhoneVerifyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/phone_verify_title"
+            android:screenOrientation="portrait" /> <!-- 设置界面 -->
+        <!-- 忘记密码 -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.PhoneResetActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/phone_reset_title"
+            android:screenOrientation="portrait" /> <!-- 重置密码 -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.DialogActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- 手机号校验 -->
+        <activity
+            android:name="com.lhw.sion.ui.activity.PhotoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/photo_title"
+            android:screenOrientation="portrait" /> <!-- 手机号更换 -->
+        <activity android:name="com.lhw.sion.ui.activity.ImageActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.SettingActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.AboutActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.WebActivity" />
+        <activity android:name="com.lhw.sion.ui.activity.MyJourney" />
+        <activity android:name="com.lhw.sion.ui.activity.VideoActivityLoacalActivity" /> <!-- 关于我们 -->
+        <!-- 个人资料 -->
+        <!-- 浏览器 -->
+        <!-- 图片选择 -->
+        <!-- 查看大图 -->
+        <!-- 对话框案例 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- 图片选择 -->
+        <receiver
+            android:name="sion.my.netmanger2.NetStateReceiver"
+            android:label="广播接收器">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.lhw.sion.until.recorderlib.recorder.RecordService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

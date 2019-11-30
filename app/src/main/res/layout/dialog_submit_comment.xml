@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+
+</data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_discovery_below"
+
+        android:layout_gravity="bottom">
+
+
+            <EditText
+
+                android:layout_marginTop="20dp"
+                android:id="@+id/dialog_context"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:maxLength="300"
+                android:layout_height="400dp"
+                android:hint="最多输入300字"/>
+
+
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@+id/dialog_send"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_enjoy"/>
+
+
+    </LinearLayout>
+</layout>

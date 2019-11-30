@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.LearnVideoPersonActivity">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_home_toolbar"
+            >
+
+            <com.google.android.material.appbar.AppBarLayout
+
+                android:id="@+id/abl_test_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:elevation="0px">
+
+                <com.lhw.sion.widget.XCollapsingToolbarLayout
+                    android:id="@+id/ctl_test_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:scrimVisibleHeightTrigger="100dp">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_home_toolbar"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="70dp"
+                            android:orientation="horizontal">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/video_person_img"
+                                xmlns:circleimageview="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/ic_launcher"
+                                circleimageview:civ_border_overlay="false"
+                                circleimageview:civ_border_color="@color/white"
+                                circleimageview:civ_border_width="1dp"
+                                />
+                            <LinearLayout
+                                android:paddingLeft="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/themmargin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="精修小王"></TextView>
+                                <TextView
+                                    android:textSize="@dimen/NumberTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No.110"></TextView>
+                                <TextView
+                                    android:textSize="@dimen/NumberTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="东莞"></TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2229粉丝"></TextView>
+                            <TextView
+                                android:paddingLeft="50dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9999获赞"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                </com.lhw.sion.widget.XCollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+            <androidx.core.widget.NestedScrollView
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="start"
+                        android:background="@android:color/transparent"
+                        app:menu="@menu/menu_video_me_top_nav"
+                        app:itemTextColor="@drawable/selector_video_navigation_color"
+                        android:layout_height="50dp"/>
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:orientation="horizontal">
+                        <FrameLayout
+                            android:padding="3dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:scaleType="fitXY"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/temp_bg"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="clothes"
+                                android:textColor="@color/white"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="right|bottom"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="20dp"
+                                    android:layout_margin="5dp"
+                                    android:layout_height="20dp"
+                                    app:srcCompat="@drawable/icon_video_love"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/NumberTwo"
+                                    android:textColor="@color/white"
+                                    android:text="112"></TextView>
+                            </LinearLayout>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:padding="3dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:scaleType="fitXY"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/temp_bg"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="clothes"
+                                android:textColor="@color/white"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="right|bottom"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="20dp"
+                                    android:layout_margin="5dp"
+                                    android:layout_height="20dp"
+                                    app:srcCompat="@drawable/icon_video_love"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/NumberTwo"
+                                    android:textColor="@color/white"
+                                    android:text="112"></TextView>
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:padding="3dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:scaleType="fitXY"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/temp_bg"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="clothes"
+                                android:textColor="@color/white"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="right|bottom"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="20dp"
+                                    android:layout_margin="5dp"
+                                    android:layout_height="20dp"
+                                    app:srcCompat="@drawable/icon_video_love"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/NumberTwo"
+                                    android:textColor="@color/white"
+                                    android:text="112"></TextView>
+                            </LinearLayout>
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/admissionOfSmallVideos"
+            android:elevation="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_add"
+            android:backgroundTint="@color/select_floatbutton"
+            android:layout_gravity="bottom|right"
+            ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </FrameLayout>
+
+
+</layout>

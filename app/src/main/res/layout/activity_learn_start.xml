@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+<data>
+
+    <variable
+        name="word"
+        type="sion.my.jinxiu.bean.WordSpecificLearn.BeanBean" />
+    <variable
+        name="MProcess"
+        type="String" />
+</data>
+
+    <ScrollView
+        android:id="@+id/activity_learn"
+        android:background="@color/blue02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.LearnStartActivity">
+
+<LinearLayout
+        android:background="@color/blue02"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <com.hjq.bar.TitleBar
+              android:setTitleText="@{MProcess}"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+
+              bind:titleColor="@color/white"
+              bind:titleSize="@dimen/themmargin"
+              bind:leftIcon="@drawable/icon_back"
+              android:background="@color/blue02"/>
+
+      </RelativeLayout>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/icon_wordpage"
+            android:text="@{word.wordSpecific.word}"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/NumberOnej"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.lhw.sion.ui.view.CulationLayout
+                android:id="@+id/culation1"
+                android:CulationLayoutvideo="@{word.wordSpecific.ukmusic}"
+                android:CulationLayouttext="@{word.wordSpecific.ukarticulation}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.lhw.sion.ui.view.CulationLayout
+                android:layout_below="@id/culation1"
+                android:layout_alignLeft="@id/culation1"
+                android:CulationLayoutvideo="@{word.wordSpecific.usamusic}"
+                android:CulationLayouttext="@{word.wordSpecific.usaarticulation}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <com.lhw.sion.ui.view.AskLayout
+            android:id="@+id/masklayout"
+            android:layout_marginTop="30dp"
+            android:AskLayoutstringarray="@{word.question}"
+            android:setask="@{word.ask}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>
+    </ScrollView>
+</layout>

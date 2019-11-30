@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout   xmlns:bind="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="madapter"
+        type="com.lhw.sion.bean.DataBindingRecyclerAdapter" />
+<variable
+    name="activity"
+    type="com.lhw.sion.common.MyActivity" />
+
+    <variable
+        name="count"
+        type="String" />
+</data>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+<com.hjq.bar.TitleBar
+    android:elevation="200dp"
+    app:leftIcon="@drawable/icon_back"
+    android:layout_width="100dp"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content"></com.hjq.bar.TitleBar>
+
+        <LinearLayout
+
+            android:layout_gravity="bottom|end"
+            android:gravity="bottom|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="@{count}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:text="已学习"/>
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/learn_scroll"
+               android:elevation="-20dp"
+            android:background="@drawable/bg_learnstart_one"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <androidx.recyclerview.widget.RecyclerView
+android:layout_gravity="center"
+                   android:id="@+id/learn_recy"
+                   android:adapter="@{madapter}"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+           </androidx.core.widget.NestedScrollView>
+
+
+    <ImageView
+        android:id="@+id/learn_next"
+        android:rotation="180"
+        android:src="@drawable/icon_back"
+        android:layout_width="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_vertical|right"
+        android:layout_height="100dp"></ImageView>
+
+
+        <ImageView
+            android:id="@+id/learn_last"
+           android:src="@drawable/icon_back"
+            android:layout_width="wrap_content"
+
+            android:layout_gravity="center_vertical|left"
+            android:layout_height="100dp"></ImageView>
+
+    </FrameLayout>
+</layout>

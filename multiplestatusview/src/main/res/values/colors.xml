@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    <!-- 按钮按压时的颜色 -->
+    <color name="colorButtonPressed">#1976D2</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="colorButtonDisable">#BBBBBB</color>
+    <color name="colorAccent">#5A8DDF</color>
+</resources>

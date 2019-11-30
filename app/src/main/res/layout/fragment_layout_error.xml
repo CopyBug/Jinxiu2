@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+                android:layout_gravity="center"
+              android:gravity="center"
+            android:background="@android:color/transparent"
+              android:id="@+id/ll_error"
+              android:orientation="vertical">
+
+    <ImageView
+     android:layout_marginBottom="4dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_error"/>
+
+    <TextView
+
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="公主,我不能为你服务啊!"/>
+    <TextView
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请打开网络"/>
+
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+        <data>
+            <variable
+                name="mWord"
+                type="sion.my.jinxiu.bean.WordSpecificLearn.BeanBean.WordSpecificBean" />
+            <variable
+                name="madapter"
+                type="com.lhw.sion.bean.DataBindingRecyclerAdapter" />
+            <variable
+                name="activity"
+                type="com.lhw.sion.common.MyActivity" />
+        </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl_test_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0px">
+
+            <com.lhw.sion.widget.XCollapsingToolbarLayout
+
+                android:id="@+id/ctl_test_bar"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="@color/blue06"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:scrimVisibleHeightTrigger="80dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:gravity="bottom|center_horizontal"
+       android:layout_weight="4"
+       android:orientation="vertical">
+       <com.lhw.sion.ui.view.CulationLayout
+           android:id="@+id/en_video"
+           android:CulationLayoutvideo="@{mWord.ukmusic}"
+           android:CulationLayouttext="@{mWord.ukarticulation}"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+       <com.lhw.sion.ui.view.CulationLayout
+           android:layout_alignLeft="@id/en_video"
+           android:layout_below="@id/en_video"
+           android:CulationLayouttext="@{mWord.usaarticulation}"
+           android:CulationLayoutvideo="@{mWord.usamusic}"
+           android:layout_marginTop="5dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+   </RelativeLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:textSize="@dimen/NumberTwo"
+        android:textColor="@color/white"
+        android:maxLines="2"
+        android:text="@{mWord.transaction}"></TextView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"></View>
+
+</LinearLayout>
+
+                </FrameLayout>
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/t_test_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    >
+
+                  <RelativeLayout
+                      android:layout_marginTop="@dimen/themmargin"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:textColor="@color/white"
+                          android:layout_width="wrap_content"
+                          android:layout_centerHorizontal="true"
+                          android:layout_centerVertical="true"
+                          android:layout_height="wrap_content"
+                          android:text="@{mWord.word}"
+                          android:textSize="@dimen/NumberOne"
+                          android:gravity="center"></TextView>
+                      <ImageView
+                          android:layout_centerVertical="true"
+                          android:id="@+id/learninfo_black"
+                          android:layout_alignParentRight="true"
+                          android:rotation="180"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:src="@drawable/icon_back"></ImageView>
+                  </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+
+
+            </com.lhw.sion.widget.XCollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView
+            android:background="@color/white45"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/mRecyclerView"
+                    android:adapter="@{madapter}"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

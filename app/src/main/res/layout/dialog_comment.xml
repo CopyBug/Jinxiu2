@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="mAdapter"
+            type="com.lhw.sion.ui.dialog.CommentDialog.Builder.CommentDataBindingRecyclerAdapter" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@drawable/bg_discovery_below"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        android:layout_gravity="bottom">
+        <com.hjq.bar.TitleBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backButton="false"
+            android:id="@+id/dialog_close"
+            app:rightIcon="@drawable/icon_close"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:id="@+id/dialog_recy"
+            android:adapter="@{mAdapter}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <include
+            layout="@layout/dialog_comment_botton"></include>
+    </LinearLayout>
+</layout>

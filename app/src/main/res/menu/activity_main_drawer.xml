@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/icon_jihua"
+            android:title="@string/menu_plan" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/icon_jilv"
+            android:title="@string/menu_recording" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/icon_ziliao"
+            android:title="@string/menu_data"
+            />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@mipmap/icon_tonzhi"
+            android:title="@string/menu_note" />
+    </group>
+
+    <item android:title="更多">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/icon_guanyu"
+                android:title="@string/menu_about" />
+            <item
+
+                android:icon="@mipmap/icon_fankui"
+                android:title="反馈" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@mipmap/icon_setting"
+                android:title="@string/menu_setting" />
+        </menu>
+    </item>
+
+</menu>

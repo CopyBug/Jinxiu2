@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="rank_adapter"
+            type="com.lhw.sion.bean.DataBindingRecyclerAdapter" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<com.lhw.sion.ui.view.MeasureRecyclerView
+    android:adapter="@{rank_adapter}"
+    android:id="@+id/rank_recy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

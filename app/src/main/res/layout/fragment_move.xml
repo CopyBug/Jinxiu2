@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<com.hjq.bar.TitleBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:backButton="false"
+    android:background="@android:color/transparent"
+    app:title="@string/move_data_title"
+    />
+        <com.hjq.widget.layout.SettingBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+           app:bar_leftColor="@color/black85"
+            app:bar_leftText="@string/move_data_function1"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+          />
+
+
+        <com.hjq.widget.layout.SettingBar
+            app:bar_leftColor="@color/black85"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:bar_leftText="@string/move_data_function2"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+           />
+        <com.hjq.widget.layout.SettingBar
+            app:bar_leftColor="@color/black85"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:bar_leftText="@string/move_data_function3"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+            />
+        <com.hjq.widget.layout.SettingBar
+            app:bar_leftColor="@color/black85"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:bar_leftText="@string/move_data_function4"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+            />
+
+        <com.hjq.widget.layout.SettingBar
+            app:bar_leftColor="@color/black85"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:bar_leftText="@string/move_data_function5"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+            />
+        <com.hjq.widget.layout.SettingBar
+            app:bar_leftColor="@color/black85"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:bar_leftText="@string/move_data_function6"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+            />
+
+        <com.hjq.widget.layout.SettingBar
+            app:bar_leftColor="@color/black85"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:bar_leftText="@string/move_data_function7"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+            />
+        <com.hjq.widget.layout.SettingBar
+            app:bar_leftColor="@color/black85"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:bar_leftText="@string/move_data_function8"
+            app:bar_leftIcon="@drawable/move_icon"
+            app:bar_rightIcon="@drawable/ico_go_black"
+            />
+    </LinearLayout>
+</layout>

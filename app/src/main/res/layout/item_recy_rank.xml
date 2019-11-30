@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="rank"
+        type="com.lhw.sion.bean.DatabingRank" />
+</data>
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="10dp"
+        android:background="@color/white"
+        android:layout_margin="1dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:src="@drawable/icon_second"
+            android:layout_height="30dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/discovery_img"
+            xmlns:circleimageview="http://schemas.android.com/apk/res-auto"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_error"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            circleimageview:civ_border_overlay="false"
+            circleimageview:civ_border_color="@color/red05"
+            circleimageview:civ_border_width="1dp"
+            />
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/themmargin"
+            android:singleLine="true"
+            android:text="1231231231"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/icon_love"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"/>
+</LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App 样式中引用的颜色 -->
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">#5A8DDF</color>
+    <color name="windowBackground">#F4F4F4</color>
+    <color name="textColor">#333333</color>
+    <color name="textColorHint">#757575</color>
+
+    <!-- 按钮按压时的颜色 -->
+    <color name="colorButtonPressed">#1976D2</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="colorButtonDisable">#BBBBBB</color>
+    <!-- 分割线的颜色 -->
+    <color name="colorLine">#ECECEC</color>
+
+    <!-- 对话框确认按钮文本颜色 -->
+    <color name="colorConfirm">#007AFF</color>
+    <!-- 对话框取消按钮文本颜色 -->
+    <color name="colorCancel">#F44336</color>
+<!--日间模式-->
+    <color name="colock_card_white_black">@color/white_day</color>
+    <color name="color_background_blue_black">@color/blue_day</color>
+    <color name="color_text1_black_grace">@color/black1_day</color>
+    <color name="color_text2_black_grace">@color/black2_day</color>
+    <color name="defaultblack">#DFE0E0</color>
+    <color name="discovery_text">#244075</color>
+    <color name="shadow_color">#7F000000</color>
+<!--进度条颜色-->
+    <color name="colorbar">#F5A623</color>
+
+</resources>

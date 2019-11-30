@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+    <variable
+        name="comment"
+        type="sion.my.jinxiu.bean.SelectVideo.BeanBean.WordCommentsBean" />
+    <variable
+        name="isshow"
+        type="androidx.recyclerview.widget.RecyclerView" />
+        <variable
+            name="replyAdapter"
+            type="com.lhw.sion.ui.dialog.CommentDialog.Builder.ReplyDataBindingRecyclerAdapter" />
+        <variable
+            name="writer"
+            type="String" />
+
+</data>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+
+            android:paddingTop="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+        android:id="@+id/text_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            xmlns:circleimageview="http://schemas.android.com/apk/res-auto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:glide_url_circle="@{comment.jxUser.imghead}"
+            circleimageview:civ_border_color="@color/white"
+            circleimageview:civ_border_overlay="false"
+            circleimageview:civ_border_width="1dp"
+            />
+
+        <LinearLayout
+
+                android:clickable="true"
+                android:background="@drawable/selector_home_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp">
+
+                <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{comment.jxUser.username}" />
+
+                <Button
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:background="@drawable/bg_videoperson_see"
+                        android:reader="@{comment.phone}"
+                        android:text="作者"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:writer="@{writer}"></Button>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                        <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                            <TextView
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@{comment.content}" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:paddingLeft="8dp"
+                                    android:textColor="#585858"
+                                    android:textSize="8dp"
+                                    android:toDate="@{comment.ctime}"></TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <com.sackcentury.shinebuttonlib.ShineButton
+                                    android:id="@+id/item_love"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerInParent="true"
+                                    app:allow_random_color="false"
+                                    app:btn_color="#707070"
+                                    app:btn_fill_color="#F8041B"
+                                    app:siShape="@drawable/icon_love" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{comment.wordStars!=null?String.valueOf(comment.wordStars.size()):String.valueOf(0)}"
+                                    android:textColor="@color/black"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!--                  <com.lhw.sion.ui.view.ExpandComment-->
+                    <!--                      android:id="@+id/expand"-->
+
+                    <!--                      android:layout_width="match_parent"-->
+                    <!--                      android:layout_height="wrap_content" />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginLeft="40dp"
+                android:id="@+id/item_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adapter="@{replyAdapter}"
+                android:paddingLeft="8dp" />
+
+    </LinearLayout>
+</layout>

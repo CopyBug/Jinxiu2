@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/showInput"
+    android:gravity="center_vertical"
+    android:layout_height="50dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_text2_black_grace"></View>
+   <LinearLayout
+       android:paddingLeft="@dimen/dp_10"
+       android:paddingRight="@dimen/dp_10"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="horizontal">
+
+       <TextView
+           android:id="@+id/et_content"
+           android:gravity="center_vertical"
+           android:layout_height="match_parent"
+           android:layout_width="0dp"
+           android:textSize="@dimen/NumberTwo"
+           android:hint="@string/commentDialog_data_edit"
+           android:layout_weight="1"/>
+
+
+   </LinearLayout>
+</LinearLayout>

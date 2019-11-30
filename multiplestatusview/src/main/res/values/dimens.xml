@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 默认分割线大小 -->
+    <dimen name="line_size">1px</dimen>
+    <!-- 默认按钮的圆角大小 -->
+    <dimen name="button_round_size">5dp</dimen>
+
+    <!-- 消息对话框圆角大小 -->
+    <dimen name="dialog_message_round_size">15dp</dimen>
+    <!-- 菜单对话框圆角大小 -->
+    <dimen name="dialog_menu_round_size">12dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="normal_ts">18sp</dimen>
+    <!--    特大号-->
+    <dimen name="NumberOnej">35dp</dimen>
+    <!--    大号-->
+    <dimen name="NumberOne">28dp</dimen>
+    <!--    中号-->
+    <dimen name="NumberTwo">15dp</dimen>
+    <dimen name="themmargin">22dp</dimen>
+
+    <dimen name="fixed_height_bottom_padding" >50dp</dimen>
+
+<!--seekbar-->
+    <dimen name="seekbar_thumb_width">25dp</dimen>
+</resources>
